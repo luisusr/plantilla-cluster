@@ -6,8 +6,8 @@ Es un proyecto base que cuenta con despliegues de componentes cross necesarios p
 
 * Balanceador de carga (Traefik)
 * Componente de monitorizacion de trazas (EFK)
-* Componente de monitorizacion de cluster (Prometheus + Grafana) PENDIENTE DESPLIEGUE
-* componente de trazabilidad (Jaeger) PENDIENTE DESPLIEGUE
+* Componente de monitorizacion de cluster (Prometheus + Grafana) PENDIENTE DE AGREGAR
+* componente de trazabilidad (Jaeger) PENDIENTE DE AGREGAR
 * Un microservicio de prueba con dependencias necesarias para interaccion con componentes
 
 Requisitos:
@@ -30,5 +30,5 @@ PARA DESPLEGAR MICROSERVICIO DE PRUEBA
 2. Linux y Mac OS: Dentro de directorio de modulo Modulos/pocws ejecutar: **build**
 3. Windows: Ejectuar contenido dentro de archivo
 
-NOTA: quedan tambien pendientes de desplegar microservicio de discovery y/o centralizador de api y ejemplo de cloud config para entornos
+NOTA: quedan tambien pendientes de agregar microservicio de discovery y/o centralizador de api y ejemplo de cloud config para entornos.
 
