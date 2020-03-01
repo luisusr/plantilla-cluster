@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cima-logging
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: cima-networking
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: cima-monitoring
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: cima-dev

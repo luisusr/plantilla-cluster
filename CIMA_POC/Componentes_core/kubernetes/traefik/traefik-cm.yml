@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: cima-networking
+  name: traefik-dynamic-configmap
+data:
+  traefik.toml: |
+    # Dynamic configuration
+    [http]
+      [http.routers]
+        [http.routers.http_catchall]
+          entryPoints = ["http"]
+          middlewares = ["https_redirect"]
+          rule = "HostRegexp(`{host:.+}`)"
+          service = "noop"
+      
+      [http.services]
+        # noop service, the URL will be never called
+        [http.services.noop.loadBalancer]
+          [[http.services.noop.loadBalancer.servers]]
+            url = "http://192.168.0.1:1337"
+      
+      [http.middlewares]
+        [http.middlewares.https_redirect.redirectScheme]
+          scheme = "https"
+          permanent = true
+    [tls]
+     [[tls.certificates]]
+       certFile = "/ssl/tls.crt"
+       keyFile = "/ssl/tls.key"

@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: mspocws-ingress
+  namespace: cima-dev
+  annotations:
+      kubernetes.io/ingress.class: traefik
+      traefik.ingress.kubernetes.io/frontend-entry-points: https
+spec:
+  tls:
+    - secretName: traefik-tls-cert
+  rules:
+    - host: mspocws.cima.es
+      http:
+        paths:
+          - backend:
+              serviceName: mspocws-app
+              servicePort: 9080

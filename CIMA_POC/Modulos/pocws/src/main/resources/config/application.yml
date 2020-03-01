@@ -1,0 +1,32 @@
+server:
+    port: 9080
+
+logging:
+  level:
+    root: INFO
+    
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: ["configprops", "env", "health", "info", "threaddump", "logfile", "metrics", "beans", "prometheus"]
+      path-mapping:
+        prometheus: /metrics
+        metrics: /management/metrics
+        configprops: /management/configprops
+        env: /management/env
+        health: /management/health
+        info: /management/info
+        threaddump: /management/threaddump
+        logfile: /management/logfile
+        beans: /management/beans
+  endpoint:
+    health:
+      show-details: WHEN_AUTHORIZED
+  info:
+    git:
+      mode: full
+  health:
+    mail:
+      enabled: false # When using the MailService, configure an SMTP server and set this to true

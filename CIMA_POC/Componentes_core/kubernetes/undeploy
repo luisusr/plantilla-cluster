@@ -1,0 +1,12 @@
+#!/bin/bash
+kubectl delete namespace cima-dev
+kubectl delete namespace cima-logging
+kubectl delete namespace cima-networking
+kubectl delete namespace cima-monitoring
+kubectl get pv | grep Released | awk '{print $1}' | xargs kubectl delete pv
+kubectl delete clusterrole fluentd
+kubectl delete clusterrolebinding fluentd
+kubectl delete clusterrole traefik-ingress-controller
+kubectl delete clusterrolebinding traefik-ingress-controller
+
+

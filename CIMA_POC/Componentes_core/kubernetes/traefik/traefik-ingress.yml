@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: traefik-dashboard-ingress
+  namespace: cima-networking
+  annotations:
+      kubernetes.io/ingress.class: traefik
+      traefik.ingress.kubernetes.io/frontend-entry-points: https
+spec:
+  tls:
+    - secretName: traefik-tls-cert
+  rules:
+    - host: traefik.cima.es
+      http:
+        paths:
+          - backend:
+              serviceName: traefik-ingress-controller-dashboard-service
+              servicePort: 8080

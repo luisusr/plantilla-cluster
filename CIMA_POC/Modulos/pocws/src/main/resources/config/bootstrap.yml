@@ -1,0 +1,5 @@
+spring:
+    application:
+        name: mspocws
+    profiles:
+        active: #spring.profiles.active#

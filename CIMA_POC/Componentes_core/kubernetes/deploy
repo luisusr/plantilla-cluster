@@ -1,0 +1,9 @@
+#!/bin/bash
+kubectl apply -f namespace.yml
+kubectl create secret tls traefik-tls-cert --key traefik/tls/tls.key --cert traefik/tls/tls.crt -n cima-networking
+kubectl apply -f volumes/
+kubectl apply -f traefik/
+kubectl apply -f elasticsearch/
+kubectl apply -f kibana/
+kubectl apply -f fluentd/
+
