@@ -30,5 +30,5 @@ PARA DESPLEGAR MICROSERVICIO DE PRUEBA
 2. Linux y Mac OS: Dentro de directorio de modulo Modulos/pocws ejecutar: **build**
 3. Windows: Ejectuar contenido dentro de archivo
 
-NOTA: quedan tambien pendientes de agregar microservicio de discovery y/o centralizador de api y ejemplo de cloud config para entornos.
+**Nota:** quedan tambien pendientes de agregar microservicio de discovery y/o centralizador de api y ejemplo de cloud config para entornos.
 
