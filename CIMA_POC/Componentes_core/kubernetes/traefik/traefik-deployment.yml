@@ -38,7 +38,6 @@ spec:
         - --entrypoints.https.Address=:443
         - --providers.kubernetesingress
         - --log.level=INFO
-        - --api.insecure
         - --api.dashboard
         - --metrics.prometheus=true
         - --metrics.prometheus.buckets=0.100000, 0.300000, 1.200000, 5.000000

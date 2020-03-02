@@ -13,6 +13,10 @@ data:
           middlewares = ["https_redirect"]
           rule = "HostRegexp(`{host:.+}`)"
           service = "noop"
+        [http.routers.my-api]
+          rule = "Host(`traefik.cima.es`)"
+          service = "api@internal"
+          middlewares = ["auth"]
       
       [http.services]
         # noop service, the URL will be never called
@@ -24,6 +28,9 @@ data:
         [http.middlewares.https_redirect.redirectScheme]
           scheme = "https"
           permanent = true
+        [http.middlewares.auth.basicAuth]
+          users = ["admin:$apr1$mSubp6QI$rYbuye2KlcYRkfbhXsFjr."]
+          removeHeader = true
     [tls]
      [[tls.certificates]]
        certFile = "/ssl/tls.crt"
