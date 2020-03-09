@@ -6,7 +6,7 @@ Es un proyecto base que cuenta con despliegues de componentes cross necesarios p
 
 * Balanceador de carga (Traefik)
 * Componente de monitorizacion de trazas (EFK)
-* Componente de monitorizacion de cluster (Prometheus + Grafana) PENDIENTE DE AGREGAR
+* Componente de monitorizacion de cluster (Grafana) PENDIENTE DE AGREGAR
 * componente de trazabilidad (Jaeger) PENDIENTE DE AGREGAR
 * Un microservicio de prueba con dependencias necesarias para interaccion con componentes
 
@@ -35,4 +35,7 @@ Una vez instalado el cluster y desplegados los componentes, es necesario importa
 **Importante:** Para Mac OS y Windows, en el caso de Docker For Desktop es necesario ingresar los directorios compartidos para el caso de los volumenes persistentes, tambien se puede utilizar [Docker Toolbox](https://docs.docker.com/docker-for-mac/docker-toolbox/) o [minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/). Cabe mencionar que este tipo de soluciones son para fines de desarrollo y no se supone que sean utilizadas para entornos productivos.
 
 **Nota:** quedan tambien pendientes de agregar microservicio de discovery y/o centralizador de api y ejemplo de cloud config para entornos.
+
+**Changelog** 
+* Se agrtega prometeo
 
