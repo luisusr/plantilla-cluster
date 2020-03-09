@@ -16,4 +16,9 @@ metadata:
 kind: Namespace
 apiVersion: v1
 metadata:
+  name: cima-tracing
+---
+kind: Namespace
+apiVersion: v1
+metadata:
   name: cima-dev

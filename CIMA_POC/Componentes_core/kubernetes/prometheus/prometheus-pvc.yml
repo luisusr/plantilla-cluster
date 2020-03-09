@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: prometheus-cluster
+  namespace: cima-monitoring
+  labels:
+    app: prometheus
+spec:
+  storageClassName: prometheus
+  accessModes:
+    - "ReadWriteOnce"
+  resources:
+    requests:
+      storage: 20Gi

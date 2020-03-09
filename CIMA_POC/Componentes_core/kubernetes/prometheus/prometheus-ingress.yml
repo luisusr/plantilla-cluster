@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: prometheus-ingress
+  namespace: cima-monitoring
+  annotations:
+      kubernetes.io/ingress.class: traefik
+      traefik.ingress.kubernetes.io/frontend-entry-points: https
+spec:
+  tls:
+    - secretName: traefik-tls-cert
+  rules:
+    - host: prometheus.cima.es
+      http:
+        paths:
+          - backend:
+              serviceName: prometheus
+              servicePort: 9090
