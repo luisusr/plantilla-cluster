@@ -1,6 +1,7 @@
 # plantilla-cluster-k8s
 Plantilla para proyecto entorno cluster distribuido microservicios y componentes cross.
 
+**NOTA IMPORTANTE:** Este repositorio queda deprecado. Los nuevos cambios, funcionalidades y mantenimientos. Se seguiran realizando sobre [El nuevo](https://github.com/luisusr/poc-k8s-cluster)
 
 Es un proyecto base que cuenta con despliegues de componentes necesarios para control sobre una solucion completa basada en  arquitecturas orientadas a microservicios y en entornos distribuidos. El cual se despliega sobre un cluster de kubernetes como orquestador PAAS y runtime de Docker para ejecucion de contenedores los cuales incluyen.
 
