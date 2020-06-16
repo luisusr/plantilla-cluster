@@ -1,4 +1,4 @@
-# plantilla-cluster
+# plantilla-cluster-k8s
 Plantilla entorno cluster distribuido microservicios y componentes cross.
 
 
