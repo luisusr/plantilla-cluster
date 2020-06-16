@@ -1,5 +1,5 @@
 # plantilla-cluster-k8s
-Plantilla entorno cluster distribuido microservicios y componentes cross.
+Plantilla para proyecto entorno cluster distribuido microservicios y componentes cross.
 
 
 Es un proyecto base que cuenta con despliegues de componentes necesarios para control sobre una solucion completa basada en  arquitecturas orientadas a microservicios y en entornos distribuidos. El cual se despliega sobre un cluster de kubernetes como orquestador PAAS y runtime de Docker para ejecucion de contenedores los cuales incluyen.
